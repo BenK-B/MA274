@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{mathrsfs}
+\usepackage{enumerate}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{fancyhdr} % Required for headers and footers
+\pagestyle{fancy}     % Activate fancy page style
+\usepackage{amsfonts}  % or \usepackage{amssymb}
+
+\fancyhf{}            % Clear all headers and footers
+\fancyhead[C]{Ben Kaiser-Bulmash, Problem Set 1, September 12, 2024}  % Add title to the center of every page
+
+\title{Problem Set 1}
+\author{Ben Kaiser-Bulmash}
+\date{September 12, 2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercise 1.17}
+\begin{enumerate}[1]
+    \item For the set $\mathscr{U} = \{a, b, \{c, d\}\}$, which of the following are true:
+    \begin{enumerate}[i.]
+        \item $a \in \mathscr{U}$ is true because $a$ is the first element in the set $\mathscr{U}$.
+        \item $\{a\} \in \mathscr{U}$ is false because while $a \in \mathscr{U}$, the set containing $a$, $\{a\}$, is not.
+        \item $a \subset \mathscr{U}$ is false because $a$ is not a set, thus cannot be a subset of anything.
+        \item $\{a\} \subset \mathscr{U}$ is true because $\{a\}$ contains only one element, $a$, and $a \in \mathscr{U}$.
+        \item $\{a, b\} \in \mathscr{U}$ is false because $\mathscr{U}$ has no set containing both $a$ and $b$. Both $a$ and $b$ are in $\mathscr{U}$, but there is not a set containing both.
+        \item $\{a, b\} \subset \mathscr{U}$ is true because all elements, $a$ and $b$, are in $\mathscr{U}$.
+        \item $\{\{a,b\}\} \in \mathscr{U}$ is false because while both $a$ and $b \in \mathscr{U}$, similarly to v, there is not a set containing a set with $a$ and $b$ inside.
+        \item $\{\{a,b\}\} \subset \mathscr{U}$ is false because $\mathscr{U}$ doesn't contain $\{a, b\}$. $\mathscr{U}$ contains both $a$, and $b$, but not the set containing the two. 
+        \item $\{a, b, c, d\} \subset \mathscr{U}$ is false because while $a$ and $b$ are in $\mathscr{U}$, $c$ and $d$ are not. There is a set containing $c$ and $d \in \mathscr{U}$ but not $c$ and $d$ on their own. 
+    \end{enumerate}
+    \setcounter{enumi}{2}
+    \item For the set $\mathscr{U} = \{a, b, \{a, b\}\}$ which of the following are true:
+    \begin{enumerate}[i.]
+        \item $a \in \mathscr{U}$ is true because $a$ is the first element in the set $\mathscr{U}$.
+        \item $\{a\} \in \mathscr{U}$ is false because while $a \in \mathscr{U}$, the set containing $a$, $\{a\}$, is not.
+        \item $a \subset \mathscr{U}$ is false because $a$ is not a set, thus cannot be a subset of anything.
+        \item $\{a\} \subset \mathscr{U}$ is true because $\{a\}$ contains only one element, $a$, and $a \in \mathscr{U}$.
+        \item $\{a, b\} \in \mathscr{U}$ is true because the third item in $\mathscr{U}$ is exactly $\{a, b\}$.
+        \item $\{a, b\} \subset \mathscr{U}$ is true because all elements, $a$ and $b$, are in $\mathscr{U}$.
+        \item $\{\{a,b\}\} \in \mathscr{U}$ is false because while both $a$ and $b \in \mathscr{U}$, and a set containing both ($\{a, b\}$) $\in \mathscr{U}$, there is not a set containing a set with $a$ and $b$ inside ($\{\{a, b\}\}$).
+        \item $\{\{a,b\}\} \subset \mathscr{U}$ is true because $\{a, b\} \in \mathscr{U}$ and  $\{a, b\}$ is the only element of $\{\{a,b\}\}$.
+        \item $\{a, b, c, d\} \subset \mathscr{U}$ is false because while $a$ and $b$ are in $\mathscr{U}$, $c$ and $d$ are not. 
+    \end{enumerate}
+    \setcounter{enumi}{4}
+    \item For the set $\mathscr{U} = \{\{a, b\}\}$ which of the following are true:
+    \begin{enumerate}[i.]
+        \item $a \in \mathscr{U}$ is false because $a$ on its own $\notin \mathscr{U}$, $a$ is within a set $\in \mathscr{U}$.
+        \item $\{a\} \in \mathscr{U}$ is false because the set containing only $a$, $\{a\}$, is not $\in \mathscr{U}$. 
+        \item $a \subset \mathscr{U}$ is false because $a$ is not a set, thus cannot be a subset of anything.
+        \item $\{a\} \subset \mathscr{U}$ is false because $a$ on its own $\notin \mathscr{U}$, $a$ is within a set $\in \mathscr{U}$, but not on its own $\in \mathscr{U}$.
+        \item $\{a, b\} \in \mathscr{U}$ is true because the the only item in $\mathscr{U}$ is exactly $\{a, b\}$.
+        \item $\{a, b\} \subset \mathscr{U}$ is false because the elements, $a$ and $b$, are not in $\mathscr{U}$. $\mathscr{U}$ only contains a set with $a$ and $b$ in it, but $\mathscr{U}$ doesn't contain either $a$, or $b$. 
+        \item $\{\{a,b\}\} \in \mathscr{U}$ is false because while a set containing both ($\{a, b\}$) $\in \mathscr{U}$, there is not a set containing a set with $a$ and $b$ inside ($\{\{a, b\}\}$).
+        \item $\{\{a,b\}\} \subset \mathscr{U}$ is true because $\{a, b\} \in \mathscr{U}$ and  $\{a, b\}$ is the only element of $\{\{a,b\}\}$.
+        \item $\{a, b, c, d\} \subset \mathscr{U}$ is false because $c$ and $d \notin \mathscr{U}$.
+    \end{enumerate}
+    \setcounter{enumi}{6}
+    \item For the set $\mathscr{U} = \{\{\{a\}\}, \{b\}, \{\{a\}, b\}\}$ which of the following are true:
+    \begin{enumerate}[i.]
+        \item $a \in \mathscr{U}$  is false because $a$ on its own $\notin \mathscr{U}$, $a$ is within a set $\in \mathscr{U}$.
+        \item $\{a\} \in \mathscr{U}$  is false because $\{a\}$ on its own $\notin \mathscr{U}$, $\{a\}$ is within a set $\in \mathscr{U}$.
+        \item $a \subset \mathscr{U}$ is false because $a$ is not a set, thus cannot be a subset of anything.
+        \item $\{a\} \subset \mathscr{U}$ is false because $\{a\}$ contains only one element, $a$, and that element, $a \notin \mathscr{U}$ alone.
+        \item $\{a, b\} \in \mathscr{U}$ is false because $\{a, b\}$ is not in $\mathscr{U}$. 
+        \item $\{a, b\} \subset \mathscr{U}$ is false because neither of the elements, $a$ or $b$, are in $\mathscr{U}$.
+        \item $\{\{a,b\}\} \in \mathscr{U}$ is false because $\{a, b\}$ $\notin \mathscr{U}$ In other words, there is not a set containing a set with $a$ and $b$ inside ($\{\{a, b\}\}$) in $\mathscr{U}$.
+        \item $\{\{a,b\}\} \subset \mathscr{U}$ is false because $\{a, b\} \notin \mathscr{U}$.
+        \item $\{a, b, c, d\} \subset \mathscr{U}$ is false because $c$ and $d$ are not in $\mathscr{U}$.
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section*{Problem 2 from section 1.7}
+Revision 
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item Let $\mathscr{X}$ be the set of pairs of real numbers $(x, y)$ that are solutions to both the equation $x^2 + y^2 = 1$ and the equation $x^2 - y^2 = 1$. Prove that $(1, 0) \in \mathscr{X}$ and $(-1, 0) \in \mathscr{X}$. \\
+    \\
+    \\ Starting with $(1, 0)$ we can plug that into both equations and see $1^2 + 0^2 = 1 + 0$ which equals $= 1$, moving to the other equation, we can see similarly $1^2 - 0^2 = 1 - 0$ which, also, equals $= 1$. Thus, $(1, 0)$ satisfies both entrance criteria and is thus $\in \mathscr{X}$. As for the second pair, $(-1, 0)$, we can see that in both equations we square $x$ thus resulting in $1$ and $-1$ appearing almost identical. $-1^2 + 0^2 = 1 + 0$ which equals $= 1$, and in the second equation $-1^2 - 0^2 = 1 - 0$ which, also equals $= 1$. Thus both $(1, 0)$ and $(-1, 0)\in \mathscr{X}$. 
+    \newpage
+
+    \section*{Problem 3 from section 1.7}
+    \item Let $\mathscr{X}$ be the set of pairs of real numbers $(x, y)$ that are solutions to both equations $x^2 + y^2 = 1$ and $x^2 - y^2 = 1$. Prove that any $(x, y) \in \mathscr{X}$ is either $(1, 0)$ or $(-1, 0)$. Combined with the previous exercise, this shows that $(x, y) \in \mathscr{X}$ if and only if $(x, y) = (1, 0)$ or $(x, y) = (-1, 0)$.
+    \\
+    Take an arbitrary $(x, y) \in \mathscr{X}$. That $(x,y)$ must be a solution to the system of equations, $x^2 + y^2 = 1$ and $x^2 - y^2 = 1$, in order to be $\in mathscr{X}$. We can solve the system by adding the two equations together which would yield $2x^2 = 2$, which can be simplified to $x^2 = 1$ this means that $x = \pm 1$. If $x^2 = 1$, then in both equations $y^2$ must $ = 0$, or else the equations wouldn't hold. Thus $\forall (x,y) \in mathscr{X}, x = \pm 1, y = 0$. This proves $(x, y) = (1, 0)$ or $(x, y) = (-1, 0)$.
+    \\ 
+    
+    \newpage
+
+    \section*{Problem 4 from section 1.7}
+    \item It is a fact that if $\mathscr{x}$ is an odd integer, then there exists an integer $\mathscr{n}$ such that $x = 2n + 1$. Let $\mathscr{O}$ denote the set of odd integers. Use the fact to prove that if $x \in \mathscr{O}$, then $x^2$ is one more than a multiple of 4.
+    \\
+    \\
+    Given $x = 2n + 1$, then $x^2 = (2n + 1)^2$. If we expand that out with the distributive property, we get $x^2 = 4n^2 + 4n + 1$. Now taking this we can see three distinct terms making up $x^2$. We have $4n^2$, lets call this $a$, we have $4n$, lets call this b, and finally $1$, we'll let this be called term $c$. We know that 4 times any number will be a multiple of 4, because that is almost exactly the definition of a multiple of 4. Thus, term a, and b will always yield multiples of 4. Although these are being added together. Thus, we need to prove multiples of 4 being added will result in a multiple of 4. 
+    To do that, lets let $g = 4h$, and $f = 4j$ where $h$ and $j \in \mathbb{R}$. Now if we say that $t = g + f$, that is equivalent to, $t = 4h + 4j$. We can factor that to $t = 4(h + j)$. From this we can see that t by definition is a multiple of 4 (it is a number (h+j) multiplied by 4). Thus, two multiples of 4 added together make another multiple of 4. 
+    Returning to our earlier point. If we know $a$ and $b$ are both multiples of 4, and adding them together is still a multiple of 4, then we have a multiple of 4, plus $c$. Since $c$ = 1, we have a multiple of 4, plus 1. Thus any $x^2 \in \mathscr{O}$ is one more than a multiple of 4. 
+\end{enumerate}
+
+Citation:
+Used ChatGPT for Latex code help.
+
+\end{document}
+
